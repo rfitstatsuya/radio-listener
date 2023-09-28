@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'radios/index'
+  resources :radios, only: [:index, :show]
   root to: "radios#index"
 end
