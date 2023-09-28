@@ -6,11 +6,40 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"/>
+    <%= yield :css %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <header>
+      <div class="header-wrapper">
+        <h1 class="header-logo">
+          <a href="#">
+            RADIO LISTENER
+          </a>
+        </h1>
+        <div class="headder-navi">
+          <div class="headder-buttons signed-button">
+            <a href="#" class="header-button">
+              ログアウト
+            </a>
+            <a href="#" class="header-button">
+              マイページ
+            </a>
+          </div>
+          <div class="headder-buttons">
+            <a href="#" class="header-button">
+              ログイン
+            </a>
+            <a href="#" class="header-button">
+              新規登録
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
+
