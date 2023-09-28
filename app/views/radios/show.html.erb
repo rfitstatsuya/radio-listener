@@ -1,0 +1,35 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'top' %>
+<% end %>
+
+<div class="show">
+  <div class="side-bar">
+    <%= render "side_bar" %>
+  </div>
+  <div class="show-main">
+    <div class="show-header">
+      <div class="radio-title">
+        <h2>ラジオ番組名</h2>
+      </div>
+    </div>
+    <div class="messages">
+      <div class="message">
+        <div class="poster">
+          <img src="assets/images/onepiece_lucci.png" alt="投稿者の画像" width="64px" height="64px" class="poster-img">
+          <p class="poster-name">
+            投稿者の名前
+          </p>
+        </div>
+        <div class="poster-message">
+          投稿者のメッセージ
+        </div>
+      </div>
+    </div>
+    <div class="show-footer">
+      <input type="text" placeholder="コメントを書く" class="message-form">
+      <div class="form-button">
+        <input type="button" value="投函" class="form-b">
+      </div>
+    </div>
+  </div>
+</div>
